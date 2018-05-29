@@ -8,7 +8,7 @@ import android.arch.persistence.room.PrimaryKey;
 public class Form {
 
     @PrimaryKey(autoGenerate = true)
-    private int uid;
+    private long formId;
 
     @ColumnInfo(name = "name")
     private String name;
@@ -21,12 +21,18 @@ public class Form {
         this.date = date;
     }
 
-    public int getUid() {
-        return uid;
+    public Form(int id, String name, String date) {
+        this.formId = (long) id;
+        this.name = name;
+        this.date = date;
     }
 
-    public void setUid(int uid) {
-        this.uid = uid;
+    public long getFormId() {
+        return formId;
+    }
+
+    public void setFormId(long formId) {
+        this.formId = formId;
     }
 
     public String getName() {

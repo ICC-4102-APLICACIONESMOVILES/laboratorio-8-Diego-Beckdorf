@@ -44,7 +44,7 @@ public class FormListAdapter extends RecyclerView.Adapter<FormListAdapter.FormVi
 
         if(mForms != null) {
             holder.mForm = mForms.get(position);
-            String id = mForms.get(position).getUid() + "";
+            String id = mForms.get(position).getFormId() + "";
             holder.mIdView.setText(id);
             holder.mTitleView.setText(mForms.get(position).getName());
             holder.mDateView.setText(mForms.get(position).getDate());
