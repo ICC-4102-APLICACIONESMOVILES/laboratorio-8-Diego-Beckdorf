@@ -7,7 +7,7 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity
 public class Form {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int uid;
 
     @ColumnInfo(name = "name")
@@ -16,8 +16,7 @@ public class Form {
     @ColumnInfo(name = "date")
     private String date;
 
-    public Form(int uid, String name, String date) {
-        this.uid = uid;
+    public Form(String name, String date) {
         this.name = name;
         this.date = date;
     }
